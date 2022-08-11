@@ -1,38 +1,101 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #212121;
+  color: #ffff;
+
+
 }
 
-.App-link {
-  color: #61dafb;
+
+#overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    background:black;
+    background:rgba(0,0,0,0.8);
+
+    filter:blur(4px);
+    -o-filter:blur(4px);
+    -ms-filter:blur(4px);
+    -moz-filter:blur(4px);
+    -webkit-filter:blur(4px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.textarea{
+  width:  50%;
+  height: 100vh;
+  padding: 10px;
+  font-size: 1.3rem;
+  outline: none;
+  font-weight: 200;
+  background: transparent;
+  color: #ffff ;
+  border-color: transparent;
+}
+
+.title
+{
+  text-align: center;
+  margin-left: 150px;
+
+}
+.render
+{
+  padding: 10px;
+  margin-left: 30px;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+  font-weight: bold;
+}
+
+h1
+{
+  font-size: 36px;
+}
+
+h2
+{
+  font-size: 32px;
+}
+
+h3
+{
+  font-size: 28px;
+}
+
+h4
+{
+  font-size: 26px;
+}
+
+h5
+{
+  font-size: 20px;
+}
+
+h6
+{
+  font-size: 16px;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+}
+
+.sep
+{
+  margin-top: 15px;
+  margin-bottom: 10px;
+  border-top: 1px solid black;
+}
+
+
+::-webkit-scrollbar { 
+    display: none;
 }

@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
+import { useState } from "react"
+import { Remarkable } from "remarkable"
 import './App.css';
 
+const md = new Remarkable()
+
 function App() {
+
+  const[text, setText] = useState('');
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <textarea 
+        className='textarea'
+        id='markdown'
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+        placeholder='Type heare'
+        autoFocus
+        />  
+
+       <div dangerouslySetInnerHTML={{ __html: md.render(text) }} className='render'>
+         
+       </div>
     </div>
   );
 }
